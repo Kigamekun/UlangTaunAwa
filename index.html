@@ -334,15 +334,15 @@
                 var confidence = event.results[0][0].confidence;
                 console.log("<strong>Text:</strong> " + transcript + "<br/><strong>Confidence:</strong> " +
                     confidence * 100 + "%")
-                if (transcript == 'huh' || transcript == 'Huh' || transcript == 'Bu' || transcript == 'fuh' ||
-                    transcript == 'huh') {
+                // if (transcript == 'huh' || transcript == 'Huh' || transcript == 'Bu' || transcript == 'fuh' ||
+                //     transcript == 'huh') {
                     var elem = document.getElementById("flame");
                     elem.parentNode.removeChild(elem);
 
                     var e = document.getElementById("fireworks");
                     e.classList.add("fireworks");
                     document.getElementById('button-click').innerHTML = 'Arigatou Gozaimasuuuu !'
-                }
+                // }
             };
 
             // start speech recognition
