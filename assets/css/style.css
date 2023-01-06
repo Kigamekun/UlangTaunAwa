@@ -17,7 +17,7 @@ body {
     position: absolute;
     width: 250px;
     height: 200px;
-    top: 800px;
+    top: 1700px;
     left: 50%;
     margin-top: -70px;
     margin-left: -125px;
@@ -215,41 +215,53 @@ body {
 
 @media (min-width: 768px) {
     #wrap-head {
-        display: flex;
-        text-align: unset;
+        display: flex !important;
+        text-align: unset !important;
     }
 
     .text-1 {
-        display: unset;
+        display: unset !important;
     }
 
     .text-2 {
-        display: none;
+        display: none !important;
     }
 
     .img-wrapper {
-        width: unset;
-        display: unset;
-        margin-top: unset;
-        margin-bottom: unset;
-        justify-content: unset;
+        width: unset !important;
+        display: unset !important;
+        margin-top: unset !important;
+        margin-bottom: unset !important;
+        justify-content: unset !important;
     }
 
 
     .img-head {
-        width: 500px;
-        border-radius: 10px;
+        width: 500px !important;
+        border-radius: 10px !important;
     }
 
     .showcase .showcase-text {
-        padding: 7rem;
+        padding: 7rem !important;
+    }
+
+    .wrapfire {
+        margin-top: 550px !important;
+    }
+
+    .cake {
+        top: 900px !important;
+    }
+    .fireworks {
+        top:700px !important;
     }
 }
 
 .fireworks {
     position: absolute;
-    z-index:-1;
+    z-index: -1;
     height: 100px;
+    top:1500px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -390,4 +402,8 @@ body {
     100% {
         transform: translateY(70px);
     }
+}
+
+.wrapfire {
+    margin-top: 550px;
 }
