@@ -32,7 +32,7 @@
     <!-- <div style="background-image: url(assets/img/heros.png);background-size: cover;width:100%;height:400px;position:absolute"></div> -->
     <div id="wrap-head" class="container gap-5 mt-5">
         <div>
-            <h1>Selamat Ulang Tahun ke 18 Awaaa ❤️</h1>
+            <h1>Selamat Ulang Tahun ke <span id="nbr">18</span> Awaaa ❤️</h1>
             <p class="text-1">Cieeee udah 18 taun sekarang mah, udah nambah tua nih yeee aku sebenernya punya banyak
                 harapan buat kamu teh mulai dari jangan males malesan terus kalau ngerjain sesuatu, katanya mau nambah
                 pinter kok males terus kalau diajakin belajar teh ngehindar terussss alasannya gak mudeng dan lain lain
@@ -467,6 +467,28 @@
                 })
             }
         })
+    </script>
+    <script>
+        var speed = 100;
+
+        /* Call this function with a string containing the ID name to
+         * the element containing the number you want to do a count animation on.*/
+        function incEltNbr(id) {
+            elt = document.getElementById(id);
+            endNbr = Number(document.getElementById(id).innerHTML);
+            incNbrRec(0, endNbr, elt);
+        }
+
+        /*A recursive function to increase the number.*/
+        function incNbrRec(i, endNbr, elt) {
+            if (i <= endNbr) {
+                elt.innerHTML = i;
+                setTimeout(function () { //Delay a bit before calling the function again.
+                    incNbrRec(i + 1, endNbr, elt);
+                }, speed);
+            }
+        }
+        incEltNbr("nbr");
     </script>
 </body>
 
